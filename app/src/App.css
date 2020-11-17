@@ -1,0 +1,175 @@
+/*
+0-600px: phone
+699-900px: Tablet portrait
+900-1200px: Tablet landscape
+1200-1800px: Normal style applies
+>1800px: Big desktop
+  $breakpoint argument choices:
+  - phone
+  - tab-port
+  - tab-land
+  - big-desktop
+    ORDER: Base + Typography > general layout + grid > page layout > Components
+  1em = 16px
+ */
+/*
+COLORS
+Primary: #A72121
+Primary light: #b03737
+Primary dark: #BA265D
+Secondary: #45b69c
+Secondary light: #58BDA6
+Secondary dark: #37927D
+white 1: #f2fdff
+White 2: #dae4e6
+White 3: #c2cacc
+White 4: #ccc
+Grey dark 1: #3F4248
+Grey dark 2: #777
+Grey dark 3: #7F8185
+*/
+:root {
+  --color-primary: #A72121;
+  --color-primary-light: #b03737;
+  --color-primary-dark: #861a1a;
+  --color-secondary: #45b69c;
+  --color-secondary-light: #58BDA6;
+  --color-secondary-dark: #37927D;
+  --color-white-1: #f2fdff;
+  --color-white-2: #dae4e6;
+  --color-white-3: #c2cacc;
+  --color-white-4: #ccc;
+  --color-grey-dark-1: #3F4248;
+  --color-grey-dark-2: #393b41;
+  --color-grey-dark-3: #32353a;
+  --color-grey-light-1: #52555a;
+  --color-grey-light-2: #65686d;
+  --color-grey-light-3: #797b7f;
+  --default-font-size: 1.6rem;
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, .3, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  font-size: 1.4rem !important;
+  color: var(--color-grey-dark-1);
+  background-color: var(--color-white-2) !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.m-lr-s {
+  margin: 1rem;
+}
+
+.btn, .btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all 0.2s;
+  position: relative;
+  font-size: var(--default-font-size);
+  border: none;
+  cursor: pointer;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(var(--color-grey-dark-1), 0.2);
+}
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+.btn:active, .btn:focus {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(var(--color-grey-dark-1), 0.2);
+}
+.btn--white {
+  background-color: var(--color-white-1);
+  color: var(--color-grey-dark-1);
+}
+.btn--white::after {
+  background-color: var(--color-white-1);
+}
+.btn--red {
+  background-color: var(--color-primary);
+  color: var(--color-white-1);
+}
+.btn--red::after {
+  background-color: var(--color-primary);
+}
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+.btn--animated {
+  animation: moveInBotton 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+}
+
+.btn-text:link, .btn-text:visited {
+  font-size: var(--default-font-size);
+  color: var(--color-primary);
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-primary);
+  padding: 3px;
+  transition: all 0.2s;
+}
+.btn-text:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white-1);
+  box-shadow: 0 1rem 2rem rgba(var(--color-grey-dark-1), 0.15);
+  transform: translateY(-2px);
+}
+.btn-text:active {
+  box-shadow: 0 0.5rem 1rem rgba(var(--color-grey-dark-1), 0.15);
+  transform: translateY(0);
+}
+
+/*# sourceMappingURL=App.css.map */

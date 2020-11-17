@@ -1,0 +1,20 @@
+.topBar{
+    background-color: var(--color-white-1);
+    height: 7rem;
+    color: var(--color-grey-light-1);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: var(--shadow-dark), .5, .5, .8;
+}
+
+.TopBar_container{
+    display: flex;
+    margin-right: 3rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.TopBar_container > * {
+    margin-right: 1rem;
+}

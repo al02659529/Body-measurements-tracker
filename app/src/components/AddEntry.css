@@ -1,0 +1,120 @@
+/*
+0-600px: phone
+699-900px: Tablet portrait
+900-1200px: Tablet landscape
+1200-1800px: Normal style applies
+>1800px: Big desktop
+  $breakpoint argument choices:
+  - phone
+  - tab-port
+  - tab-land
+  - big-desktop
+    ORDER: Base + Typography > general layout + grid > page layout > Components
+  1em = 16px
+ */
+.container {
+  display: flex;
+}
+
+.nav {
+  justify-self: flex-start;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.app {
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.app_container {
+  background-color: var(--color-white-1);
+  color: var(--color-grey-dark-1);
+  padding: 1rem;
+  margin: 1rem 2rem;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 3px 11px 4px var(--shadow-dark);
+}
+.app_container-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .app_container {
+    margin: 1rem 1.5rem;
+  }
+}
+.app_container > * {
+  margin: 0.5rem;
+}
+
+.app_date {
+  align-self: center;
+}
+.app_date-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+}
+
+.measurements_wrapper {
+  display: flex;
+}
+
+.app_measurements {
+  padding: 1.5rem 0 0 0 !important;
+}
+.app_measurements > * {
+  margin: 0;
+}
+.app_measurements-title {
+  margin: 1rem 1.5rem 0 1.5rem;
+}
+.app_measurements-field {
+  border-bottom: 0.2px solid var(--color-white-3);
+  padding: 1rem 0;
+  width: 100%;
+  cursor: pointer;
+}
+.app_measurements-field:hover {
+  border-left: 3px solid var(--color-grey-dark-2);
+}
+.app_measurements-field-selected {
+  border-left: 4px solid var(--color-primary) !important;
+}
+.app_measurements_text {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  padding-right: 20vw;
+}
+@media only screen and (max-width: 37.5em) {
+  .app_measurements_text {
+    padding-right: 10vw;
+  }
+}
+
+.app_measurements_add {
+  align-self: center;
+}
+@media only screen and (max-width: 37.5em) {
+  .app_measurements_add-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+/*# sourceMappingURL=AddEntry.css.map */

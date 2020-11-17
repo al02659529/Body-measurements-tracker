@@ -1,0 +1,119 @@
+@import "../sass/abstracts/mixins";
+
+.container{
+  display: flex;
+}
+.nav{
+  justify-self: flex-start;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.app{
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-start;
+  flex-direction: column;
+
+  &_container{
+
+    &-title{
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: .1rem;
+    }
+
+    background-color: var(--color-white-1);
+    color: var(--color-grey-dark-1);
+    padding: 1rem;
+    margin: 1rem 2rem;
+    @include respond(phone){
+      margin: 1rem 1.5rem;
+    }
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 3px 11px 4px var(--shadow-dark);
+
+    & > * {
+      margin: .5rem;
+    }
+
+  }
+
+}
+
+
+.app_date{
+  align-self: center;
+
+  &-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    padding: .5rem 1rem;
+  }
+}
+
+
+.measurements_wrapper{
+  display: flex;
+}
+
+
+// measurements
+
+.app_measurements{
+  padding: 1.5rem 0 0 0 !important;
+  & > * {
+    margin: 0;
+  }
+  &-title{
+    margin: 1rem 1.5rem 0 1.5rem;
+  }
+  &-field{
+    border-bottom: .2px solid var(--color-white-3);
+    padding: 1rem 0;
+    width: 100%;
+    cursor: pointer;
+    &:hover{
+      border-left: 3px solid var(--color-grey-dark-2);
+    }
+    &-selected{
+      border-left: 4px solid var(--color-primary) !important;
+    }
+  }
+  &_text{
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    padding-right: 20vw;
+      @include respond(phone){
+        padding-right: 10vw;
+      }
+  }
+
+}
+
+// add measurements
+
+.app_measurements_add{
+  align-self: center;
+  @include respond(phone){
+    &-field{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+
+
