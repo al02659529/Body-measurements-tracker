@@ -1,7 +1,78 @@
 {
   "measurements": {
     "userMeasurements": [
-      "Weight", "Right bicep", "Left Bicep", "Chest", "Waist", "Hips", "Left thigh", "Right thigh", "Left calve", "Right calve"
+      "Weight", "Right bicep", "Left Bicep", "Chest", "Waist"
+    ],
+    "measurementsHistory": [
+      {
+        "field": "Left Bicep",
+        "data": [
+          {
+            "date": "10/01/2020",
+            "value": 34
+          },
+          {
+            "date": "20/01/2020",
+            "value": 36
+          }
+        ]
+      },
+      {
+        "field": "Right bicep",
+        "data": [
+          {
+            "date": "10/01/2020",
+            "value": 30
+          },
+          {
+            "date": "20/01/2020",
+            "value": 34
+          }
+        ]
+      },
+      {
+        "field": "Weight",
+        "data": [
+          {
+            "date": "1/09/2020",
+            "value": 73
+          },
+          {
+            "date": "20/09/2020",
+            "value": 71.5
+          },
+          {
+            "date": "30/09/2020",
+            "value": 69
+          }
+        ]
+      },
+      {
+        "field": "Waist",
+        "data": [
+          {
+            "date": "10/01/2020",
+            "value": 96
+          },
+          {
+            "date": "20/01/2020",
+            "value": 90
+          }
+        ]
+      },
+      {
+        "field": "Chest",
+        "data": [
+          {
+            "date": "10/01/2020",
+            "value": 95
+          },
+          {
+            "date": "20/01/2020",
+            "value": 92
+          }
+        ]
+      }
     ]
   }
 }

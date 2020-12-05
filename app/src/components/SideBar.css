@@ -44,6 +44,12 @@
   cursor: pointer;
   color: var(--color-white-2);
 }
+.nav_page > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: inherit !important;
+}
 
 .nav_page:hover {
   background-color: var(--color-grey-dark-2);
@@ -51,6 +57,9 @@
 }
 
 .nav_page-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-left: 10px;
 }
 

@@ -25,6 +25,14 @@
 }
 
 .nav_page{
+
+
+    & > * {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: inherit !important;
+    }
     flex-grow: 2;
     cursor: pointer;
     color: var(--color-white-2)
@@ -36,6 +44,9 @@
 }
 
 .nav_page-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-left: 10px;
 }
 
@@ -52,3 +63,4 @@
 .selected:hover{
     background-color: var(--color-grey-dark-3);
 }
+

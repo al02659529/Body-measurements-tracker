@@ -20,13 +20,11 @@
   flex-direction: column;
 
   &_container{
-
     &-title{
       font-size: 1.8rem;
       font-weight: 600;
       letter-spacing: .1rem;
     }
-
     background-color: var(--color-white-1);
     color: var(--color-grey-dark-1);
     padding: 1rem;
@@ -40,11 +38,9 @@
     align-items: center;
     justify-content: center;
     box-shadow: 0px 3px 11px 4px var(--shadow-dark);
-
     & > * {
       margin: .5rem;
     }
-
   }
 
 }
@@ -65,6 +61,7 @@
 
 .measurements_wrapper{
   display: flex;
+  align-items: center;
 }
 
 
@@ -105,15 +102,43 @@
 
 .app_measurements_add{
   align-self: center;
-  @include respond(phone){
-    &-field{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
+  &-field{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  //@include respond(phone){
+  //  &-field{
+  //    align-items: center;
+  //    flex-wrap: wrap;
+  //  }
+  //}
+}
+
+.history{
+  align-self: flex-start;
+  &_table{
+    &-header{
+      text-align: center;
+      & > * > * {
+        padding: .1rem .5rem .5rem .7rem;
+      }
+    }
+  }
+  &_field{
+    text-align: center;
+    & > * {
+      padding: .5rem 1.5rem;
+      border: 1px solid var(--color-white-3);
+    }
+    &-date{
+
+    }
+    &-value{
+
     }
   }
 }
-
 
 

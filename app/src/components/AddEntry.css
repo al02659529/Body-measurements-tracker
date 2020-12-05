@@ -71,6 +71,7 @@
 
 .measurements_wrapper {
   display: flex;
+  align-items: center;
 }
 
 .app_measurements {
@@ -108,13 +109,28 @@
 .app_measurements_add {
   align-self: center;
 }
-@media only screen and (max-width: 37.5em) {
-  .app_measurements_add-field {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
+.app_measurements_add-field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.history {
+  align-self: flex-start;
+}
+.history_table-header {
+  text-align: center;
+}
+.history_table-header > * > * {
+  padding: 0.1rem 0.5rem 0.5rem 0.7rem;
+}
+.history_field {
+  text-align: center;
+}
+.history_field > * {
+  padding: 0.5rem 1.5rem;
+  border: 1px solid var(--color-white-3);
 }
 
 /*# sourceMappingURL=AddEntry.css.map */
