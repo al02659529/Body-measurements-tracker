@@ -11,11 +11,8 @@ const CustomLink = React.forwardRef((props, ref) => (
     <a ref={ref} {...props} style={{width: "100%", height: "100%"}}>{props.children}</a>
 ))
 
-const SideBar = (props) => {
-    const { page } = props;
+const SideBar = () => {
     let location = useLocation();
-    let url = location.pathname
-
 
     useEffect(() => {
         switch (location.pathname){
@@ -51,7 +48,7 @@ const SideBar = (props) => {
         }
     }, [location])
 
-
+    // TODO: Define if onClick attribute should be left or deleted
     const onClick = e => {
         let selected = e.target
         let classes = [...selected.classList]
@@ -62,6 +59,7 @@ const SideBar = (props) => {
         console.log(selected, classes)
     }
     return (
+        // TODO: Make this responsive
         <nav className="nav" onClick={onClick}>
             <div className="nav_block nav_filler">
                 <PhosphorLogo size={40} color="red" />
@@ -103,9 +101,7 @@ const SideBar = (props) => {
                 </Link>
             </div>
             <div className="nav_block nav_filler">
-
             </div>
-
         </nav>
     )
 }

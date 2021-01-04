@@ -1,6 +1,4 @@
-import React, { useState, useEffect } from "react";
-import SideBar from "./SideBar";
-import TopBar from "./TopBar";
+import React, { useEffect } from "react";
 import { DatePicker } from 'antd';
 import measurementsService from '../services/measurementsService'
 import './AddEntry.css'
@@ -14,6 +12,7 @@ import { setSelectedDate } from "../reducers/measurements/dateReducer";
 import { setButtonText } from "../reducers/measurements/buttonTextReducer";
 import { setIsInputInvalid } from "../reducers/measurements/InvalidInputReducer";
 import { setSelectedMeasurementHistory } from "../reducers/measurements/selectedMeasurementHistoryReducer";
+import "antd/dist/antd.css";
 
 const AddEntry = () => {
     const dispatch = useDispatch()
@@ -145,12 +144,7 @@ const AddEntry = () => {
         dispatch(setMeasurementInputValue(e.target.value))
     }
     return (
-        <div className="container">
-             {/*todo: Remove Sidebar from this component*/}
-            <SideBar page="addEntry" />
-            <div className="content">
-                {/*TODO: Remove TopBar*/}
-                <TopBar />
+        <>
                 <div className="app">
                     <div className="measurements_wrapper">
                         <div className="app_measurements app_container">
@@ -215,11 +209,8 @@ const AddEntry = () => {
                             </table>
                         </div>
                     </div>
-                    <div className="app_measurements-history"></div>
                 </div>
-            </div>
-
-        </div>
+        </>
     )
 }
 

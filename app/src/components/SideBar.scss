@@ -9,7 +9,7 @@
     background-color: var(--color-grey-dark-1);
     top: 0;
     left: 0;
-    buttom: 0;
+    bottom: 0;
     @include respond(phone){
         display: none;
     }

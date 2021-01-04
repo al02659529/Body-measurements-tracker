@@ -41,6 +41,16 @@
 
   }
 
+  &--green{
+    background-color: var(--color-secondary);
+    color: var(--color-white-1);
+
+    &::after{
+      background-color: var(--color-secondary);
+    }
+
+  }
+
   &--red{
     background-color: var(--color-primary);
     color: var(--color-white-1);

@@ -21,7 +21,7 @@
   background-color: var(--color-grey-dark-1);
   top: 0;
   left: 0;
-  buttom: 0;
+  bottom: 0;
 }
 @media only screen and (max-width: 37.5em) {
   .nav {

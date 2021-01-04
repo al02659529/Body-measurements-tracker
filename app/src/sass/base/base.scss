@@ -21,6 +21,8 @@ Grey dark 3: #7F8185
   --color-secondary: #45b69c;
   --color-secondary-light: #58BDA6;
   --color-secondary-dark: #37927D;
+  --color-tertiary: #172043;
+  --color-white: #eee;
   --color-white-1: #f2fdff;
   --color-white-2: #dae4e6;
   --color-white-3: #c2cacc;
@@ -49,6 +51,7 @@ Grey dark 3: #7F8185
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+
   @include respond(tab-land){ //width < 1200
     font-size: 56.25%; //1 rem = 9px, 9/16 = 56.25%
   }
@@ -64,9 +67,9 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  font-size: 1.4rem !important;
-  color: var(--color-grey-dark-1);
-  background-color: var(--color-white-2) !important;
+  font-size: 1.4rem;
+  color: var(--color-tertiary) !important;
+  background-color: var(--color-white) !important;
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
