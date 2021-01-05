@@ -1,5 +1,4 @@
-import './App.css';
-
+import './App.css'
 import AddEntry from "./components/AddEntry";
 import * as React from "react";
 import {
@@ -21,7 +20,7 @@ function App() {
     let isUserLogged = useSelector(store => store.user)
 
     useEffect(() => {
-        // dispatch(setUser({firstName: "Daniel"})) FOR TESTING APP
+        // dispatch(setUser({firstName: "Daniel"}))
         dispatch(setUser(null))
     }, [])
   return (

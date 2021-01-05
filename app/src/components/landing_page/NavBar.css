@@ -1,7 +1,7 @@
-nav {
+.landing_nav {
   position: sticky;
   display: flex;
-  margin-top: 2rem;
+  background-color: whitesmoke;
 }
 
 .logo_container {
@@ -11,7 +11,7 @@ nav {
 }
 
 .logo {
-  --size: 8.5rem;
+  --size: 7rem;
   height: var(--size);
   width: var(--size);
   margin-right: 15rem;

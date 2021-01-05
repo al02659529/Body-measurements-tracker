@@ -4,7 +4,7 @@ import logo from './../../media/logo.png'
 const NavBar = () => {
 // TODO: Put navBar more on the top
     return (
-        <nav>
+        <nav className="landing_nav">
             <div className="logo_container">
                 <img className="logo" src={logo} alt="Logo"/>
             </div>
