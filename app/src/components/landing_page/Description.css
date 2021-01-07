@@ -3,7 +3,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 5.3rem;
+  padding: 3rem 0 3rem 0;
+  background-image: linear-gradient(to bottom, var(--color-white), rgba(23, 32, 67, 0.1));
+  min-height: 88vh;
 }
 
 /*# sourceMappingURL=Description.css.map */

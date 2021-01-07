@@ -3,6 +3,7 @@ import NavBar from "./NavBar";
 import Description from "./Description";
 import './index.css'
 import Features from "./Features";
+import Footer from "./Footer";
 
 const LandingPage = () => {
     return (
@@ -10,6 +11,7 @@ const LandingPage = () => {
             <NavBar />
             <Description />
             <Features />
+            <Footer />
         </div>
     );
 };

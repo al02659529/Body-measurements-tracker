@@ -2,16 +2,22 @@
   position: sticky;
   display: flex;
   background-color: whitesmoke;
+  height: 9vh;
+  top: 0;
+  z-index: 100;
+  -webkit-box-shadow: 0px 0px 11px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 11px 4px rgba(0, 0, 0, 0.1);
 }
 
 .logo_container {
   flex-grow: 1;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .logo {
-  --size: 7rem;
+  --size: 6rem;
   height: var(--size);
   width: var(--size);
   margin-right: 15rem;
@@ -28,8 +34,15 @@
   align-items: center;
 }
 .menu_item {
-  margin-right: 2rem;
-  margin-left: 2rem;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 2.5rem;
+}
+.menu_item:hover {
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=NavBar.css.map */
