@@ -8,7 +8,7 @@ import {
 
 // Styling for react router link
 const CustomLink = React.forwardRef((props, ref) => (
-    <a ref={ref} {...props} style={{width: "100%", height: "100%"}}>{props.children}</a>
+    <a ref={ref} {...props} style={{width: "100%", height: "100%"}} className="rm-a-default-styles">{props.children}</a>
 ))
 
 const SideBar = () => {

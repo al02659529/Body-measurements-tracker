@@ -20,8 +20,8 @@ function App() {
     let isUserLogged = useSelector(store => store.user)
 
     useEffect(() => {
-        // dispatch(setUser({firstName: "Daniel"}))
-        dispatch(setUser(null))
+        dispatch(setUser({firstName: "Daniel"}))
+        // dispatch(setUser(null))
     }, [])
   return (
       <Router>

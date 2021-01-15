@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { DatePicker } from 'antd';
+import DatePicker from "react-datepicker";
 import measurementsService from '../services/measurementsService'
 import './AddEntry.css'
 import moment from "moment";
@@ -12,7 +12,8 @@ import { setSelectedDate } from "../reducers/measurements/dateReducer";
 import { setButtonText } from "../reducers/measurements/buttonTextReducer";
 import { setIsInputInvalid } from "../reducers/measurements/InvalidInputReducer";
 import { setSelectedMeasurementHistory } from "../reducers/measurements/selectedMeasurementHistoryReducer";
-import "antd/dist/antd.css";
+import "react-datepicker/dist/react-datepicker.css";
+
 
 const AddEntry = () => {
     const dispatch = useDispatch()
@@ -24,6 +25,7 @@ const AddEntry = () => {
     const buttonText = useSelector(state => state.buttonText)
     const isInputInvalid = useSelector(state => state.isInputInvalid)
     const selectedMeasurementHistory = useSelector(state => state.selectedMeasurementHistory)
+    const [startDate, setStartDate] = React.useState(new Date())
     const regexForInput = /^\d+(?:\.\d{1,4})?$/;
 
     useEffect(() => {
@@ -90,9 +92,9 @@ const AddEntry = () => {
       }
   }, [measurementsHistory, selectedMeasurement])
 
-    const onDateChange = (date, dateString) => {
-        console.log(date, dateString);
-        dispatch(setSelectedDate(dateString))
+    const onDateChange = (date) => {
+        console.log(date);
+        dispatch(setSelectedDate(date))
     }
 
     const onSubmitInput = (e) => {
@@ -117,7 +119,7 @@ const AddEntry = () => {
         }
         if (e.target.innerText === 'SUBMIT'){
             if (!selectedDate) {
-                document.querySelector('.ant-picker-input > input').focus()
+                document.querySelector('.react-datepicker__input-container > input').focus()
             }
              // TODO: Define onSubmit behaviour of the form
         }
@@ -162,9 +164,7 @@ const AddEntry = () => {
                                     <div>
                                         {/*TODO: Make the input required and style the :required attributed to match :focus*/}
                                         <DatePicker onChange={onDateChange}
-                                                    defaultValue={moment(new Date(), 'YYYY-MM-DD')}
-                                                    format="YYYY-MM-DD"
-                                                    placeholder="Select date"/>
+                                                    selected={startDate} />
                                     </div>
                                 </div>
                             </div>

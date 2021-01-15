@@ -1,5 +1,5 @@
 .topBar {
-  background-color: var(--color-white-1);
+  background-color: var(--color-grey-light-4);
   height: 7rem;
   color: var(--color-grey-light-1);
   display: flex;

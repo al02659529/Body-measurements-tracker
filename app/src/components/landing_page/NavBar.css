@@ -1,12 +1,24 @@
+/*
+0-600px: phone
+699-900px: Tablet portrait
+900-1200px: Tablet landscape
+1200-1800px: Normal style applies
+>1800px: Big desktop
+  $breakpoint argument choices:
+  - phone
+  - tab-port
+  - tab-land
+  - big-desktop
+    ORDER: Base + Typography > general layout + grid > page layout > Components
+  1em = 16px
+ */
 .landing_nav {
   position: sticky;
   display: flex;
-  background-color: whitesmoke;
+  background-color: #eee;
   height: 9vh;
   top: 0;
   z-index: 100;
-  -webkit-box-shadow: 0px 0px 11px 4px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 0px 11px 4px rgba(0, 0, 0, 0.1);
 }
 
 .logo_container {
@@ -21,6 +33,11 @@
   height: var(--size);
   width: var(--size);
   margin-right: 15rem;
+}
+@media only screen and (min-width: 112.5em) {
+  .logo {
+    --size: 5rem;
+  }
 }
 
 .menu {
